@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>意坚教育</title>
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=gbk">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="header">
+		<table>
+			<tr>
+				<td><a href="#"><img src="images/logo.gif" width="260"
+						height="80" /></a></td>
+						
+				<c:if test="${user!=null}">
+					<td
+						style="FONT-SIZE: 12px; FONT-WEIGHT: bold; COLOR: #000; PADDING-TOP: 20px; PADDING-RIGHT: 20px"
+						align=right>欢迎 <font color="red">张三</font>
+						登录!&nbsp;| <a class="one" href="personal">个人中心</a>|
+						<a href="logout">退出</a>|
+					</td>
+				</c:if>
+				<c:if test="${null==user}">
+					<td
+						style="FONT-SIZE: 12px; FONT-WEIGHT: bold; COLOR: #000; PADDING-TOP: 20px; PADDING-RIGHT: 20px"
+						align=right>您还未登录!&nbsp;| <a class="one" href="login.jsp">登录</a>|
+						<a href="register.jsp">注册</a>|
+					</td>
+				</c:if>
+			</tr>
+			<tr>
+				<td colspan="3" height="4" bgColor="#1c5db6"></td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="index-center">
+
+		<div id="crumbs">
+			<a href="#">论坛首页</a>  <a href="#">体育咨询</a>
+		</div>
+      
+		<div id="text-title">今天下雨了么</div>
+	
+		<div id="text-info">
+		
+			<span>楼主：<a href="">zhangsan</a></span> 
+			<c:forEach var="text" items="${textDatils.text}">
+			<span>时间：2018-01-01 12:12:12 </span>
+			</c:forEach>
+				 <span>回复：5</span>
+		</div>
+
+		<div id="text-con">
+			贴子的内容
+			
+			
+		</div>
+ 
+ 
+		<div class="text-item">
+			<div class="item-info">
+				<span>1楼：<a href="">李四</a></span> <span>时间：2018-01-01 12:12:12</span>
+			</div>
+			<div class="item-con">我觉得会下雨</div>
+
+		</div>
+		<div class="text-item">
+			<div class="item-info">
+				<span>2楼：<a href="">李四</a></span> <span>时间：2018-01-01 12:12:12</span>
+			</div>
+			<div class="item-con">我觉得会下雨</div>
+
+		</div>
+		<div class="text-item">
+			<div class="item-info">
+				<span>3楼：<a href="">李四</a></span> <span>时间：2018-01-01 12:12:12</span>
+			</div>
+			<div class="item-con">我觉得会下雨</div>
+
+		</div>
+       
+		 <div id="text-con">
+		  <form action="addReply?id=${text.textid}" method="post">
+		   <table>
+		   <tr><td><textarea id="textAreaContainer" class="textAreaContainer" name="replycontext" style="height: 100px;"></textarea></td></tr>
+			<tr><td align="right" ><button >评论</button></td></tr>
+			</table>
+			</form>
+		</div> 
+		
+
+	</div>
+
+	<div id="footer">
+		<div class="lf">
+			<a href="/about/" rel="nofollow">首页</a> | <a href="/about/"
+				rel="nofollow">关于我们</a> | <a href="/about/lianxi.html"
+				rel="nofollow">联系我们</a>
+		</div>
+		上海厉善信息技术有限公司 Shanghai Li Shan Information Technology Co. Ltd.
+	</div>
+
+</body>
+</html>

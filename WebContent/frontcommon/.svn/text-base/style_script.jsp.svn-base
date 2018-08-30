@@ -1,0 +1,118 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="security" uri="/tld/security.tld" %>
+
+<!-- meta -->
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width" />
+
+<title>SMS安全管理平台 - </title>
+
+
+<link rel="stylesheet" type="text/css" href="${staticURL }/jquery-easyui-1.4.3/themes/default/easyui.css" />
+<link rel="stylesheet" type="text/css" href="${staticURL }/jquery-easyui-1.4.3/themes/default/easyui_icons.css" />
+<link rel="stylesheet" type="text/css" href="${staticURL }/jquery-easyui-1.4.3/themes/icon.css" />
+
+<!-- MASTER STYLESHEET-->
+<link href="${staticURL}/style/front/styles.css?v=20161219" rel="stylesheet" type="text/css" />
+<link href="${staticURL}/style/front/facebox.css" rel="stylesheet" type="text/css" />
+<link href="${staticURL}/style/front/jquery.dataTables.css" rel="stylesheet" type="text/css" >
+
+<!-- 字体图标 -->
+<link href="${staticURL}/style/front/font-awesome.min.css" rel="stylesheet" type="text/css" >
+<%-- <link href="${staticURL}/style/front/elusive-webfont.css" rel="stylesheet" type="text/css" > --%>
+
+<!-- ztree样式 -->
+<link href="${staticURL}/plugins/ztree/metro.css" rel="stylesheet" type="text/css" >
+
+<!-- easyui -->
+<script type="text/javascript" src="${staticURL}/scripts/front/jquery.min.js"></script>
+<script type="text/javascript" src="${staticURL }/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="${staticURL }/jquery-easyui-1.4.3/jquery.earyui.merge.js"></script>
+<script type="text/javascript" src="${staticURL}/jquery-easyui-1.4.3/easyui-extend/datagrid-detailview.js" ></script>
+<script src="${staticURL }/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js"></script>
+<script src="${staticURL }/plugins/plugins.js"></script>
+<script src="${staticURL }/scripts/json.js"></script>
+
+
+<!-- top-util -->
+<script src="${staticURL}/scripts/top-util.js?v=20161219" type="text/javascript"></script>
+
+<!-- icons -->
+<script src="${staticURL}/scripts/top-icons.js" type="text/javascript"></script>
+
+<!-- jquery datatable -->
+<script type="text/javascript" language="javascript" src="${staticURL}/scripts/front/jquery.dataTables.js"></script>
+<script type="text/javascript" language="javascript" src="${staticURL}/scripts/front/table-managed.js"></script>
+
+<!-- 重复提交 -->
+<script type="text/javascript" language="javascript" src="${staticURL}/scripts/underscore-min.js"></script>
+
+<!-- ztree -->
+<script type="text/javascript" src="${staticURL}/scripts/front/jquery.ztree.all.js"></script>
+
+<!-- 脑图 -->
+<%-- <script type="text/javascript" src="${staticURL}/scripts/front/orgchart.js"></script> --%>
+<%-- <script type="text/javascript" src="${staticURL}/scripts/front/d3.v3.min.js"></script> --%>
+
+<!-- cookie -->
+<script type="text/javascript" src="${staticURL}/scripts/front/jquery.cookie.js"></script>
+
+<!-- 分页 -->
+<link href="${staticURL }/style/front/pagination.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="${staticURL }/scripts/front/jquery.pagination.js"></script>
+
+<!-- 模糊插件 -->
+<script type="text/javascript" src="${staticURL }/scripts/front/jquery.foggy.min.js"></script>
+
+<!-- js考试样例引导页 -->
+<%-- <link href="${staticURL}/style/front/pagewalkthrough/jquery.pagewalkthrough.css" type="text/css" rel="stylesheet" /> --%>
+<%-- <script type="text/javascript" src="${staticURL }/scripts/front/jquery.pagewalkthrough.min.js"></script> --%>
+<link href="${staticURL}/style/front/introjs/introjs.min.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="${staticURL }/scripts/front/introjs/intro.min.js"></script>
+
+<!-- 图形报表-->
+<script src="${staticURL}/highcharts-4.0.3/highcharts.js" type="text/javascript"></script>
+<script src="${staticURL}/highcharts-4.0.3/modules/exporting.js" type="text/javascript"></script>
+<script src="${staticURL}/highcharts-4.0.3/highcharts-more.js" type="text/javascript"></script>
+<script src="${staticURL}/highcharts-4.0.3/highcharts-3d.js" type="text/javascript"></script>
+<!-- echarts -->
+<script src="${staticURL}/echarts-3.4.0/echarts.min.js" type="text/javascript"></script>
+
+<!-- layer -->
+<link href="${staticURL}/plugins/layer/skin/layer.css" type="text/css" rel="stylesheet" />
+<script src="${staticURL}/plugins/layer/layer.js" type="text/javascript"></script>
+
+<!-- layui -->
+<%-- <link rel="stylesheet" href="${staticURL}/plugins/layui/css/layui.css"> --%>
+<%-- <script src="${staticURL}/plugins/layui/layui.js" charset="utf-8"></script> --%>
+
+<!-- 日期控件 -->
+<link href="${staticURL}/plugins/My97DatePicker/skin/WdatePicker.css" type="text/css" rel="stylesheet" />
+<script src="${staticURL}/plugins/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	var headerHost = "${header.Host }";
+    var dynamicURL = "${dynamicURL}/";
+    var staticURL = "${staticURL}/";
+    var waitTime = 400;
+    $(document).ajaxError(function(event, jqXHR, options, errorMsg){
+    	if(jqXHR.responseText=="{'statusCode':301}"){
+    		layer.alert('会话超时,请重新登录！', function(){
+    				window.parent.location.href="${dynamicURL}/login/userLogin";
+    			}
+    		);
+    	}
+    });
+    $(function () {
+   	 	var errorMsg = '${errorMsg}';
+   		if(errorMsg){
+   			layer.open({
+   				icon: 2,
+   				title: '提示',
+   				content: errorMsg
+   			}); 
+   		}
+    });
+</script>

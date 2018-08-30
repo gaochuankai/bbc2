@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MyHtml.html</title>
+
+<meta name="keywords" content="keyword1,keyword2,keyword3">
+<meta name="description" content="this is my page">
+<meta name="content-type" content="text/html; charset=utf-8	">
+
+<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+</head>
+
+<body>
+
+	<form action="formDemo" method="get">
+
+		<!-- 
+  			<input>元素 输入表单
+  			type：类型
+  			name：自定义名称 用户后台取数据 
+  		 -->
+		<!-- 文本框 -->
+		<input type="text" name="text"> <br />
+		<!-- input的默认类型type为text -->
+		<input name="text-default"> <br />
+		<!-- 密码框 -->
+		<input type="password" name="password"> <br />
+		<!-- 单选框
+			name：相同则为一个组，达到单选的效果
+			value：值，根据选择提交到后台
+		 -->
+		<input type="radio" name="sex" value="1">男 <input type="radio" name="sex" value="0">女 <br />
+		<!--
+			多选框 
+			name：相同则为一个组，提交时会一并提交
+			value:
+		 -->
+		<input type="checkbox" name="brand" value="0">苹果
+		<input type="checkbox" name="brand" value="1">联想
+		<input type="checkbox" name="brand" value="2">华为<br />
+		<!-- 按钮，本身没有什么作用，后期可以使用脚本给按钮添加功能 -->
+		<input type="button" value="按我"> <br />
+		
+		
+		<!-- 隐藏属性 该表单不在页面显示 只做提交时传值使用 -->
+		<input type="hidden" name="userId" value="10010">
+
+		<!--<select> 元素下拉列表
+			<option> 元素定义待选择的选项。
+			列表通常会把首个选项显示为被选选项。
+			您能够通过添加 selected 属性来定义预定义选项。
+		 -->
+		<select name="cars">
+			<option value="0">保时捷</option>
+			<option value="1">宝马</option>
+			<option value="2" selected>奔驰</option>
+			<option value="3">捷达</option>
+		</select>
+		<br/>
+		<!-- <textarea> 元素  文本域-->
+		<textarea name="message" rows="10" cols="30">意坚教育</textarea><br/>
+		
+		<!-- <button> 元素 按钮-->
+		<button type="button" onclick="alert('Hello World!')">再点我</button>
+		
+		<!-- 提交按钮，点击后对整个表单以method设置的提交方式进行提交，提交到action所指定地址-->
+		<input type="submit"><br />
+		
+		<SELECT NAME="studyCenter" id="studyCenter"  SIZE="1">
+           <OPTION VALUE="0">全部
+           <OPTION VALUE="1">湖北电大网络学习中心
+           <OPTION VALUE="2">成都师范学院网络学习中心
+           <OPTION VALUE="3">武汉职业技术学院网络学习中心
+   </SELECT>
+
+	</form>
+
+
+
+</body>
+</html>

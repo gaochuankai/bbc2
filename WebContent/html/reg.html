@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>意坚教育-论坛-注册</title>
+<link href="css/mycss.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+	<!-- 布局顶部登录状态 -->
+	<div id="main">
+		<table width="100%" border="0">
+			<!--头部图片-->
+			<tr height=80>
+				<td width="260"><IMG src="images/logo.gif" width="260"
+					height="80" /></td>
+			</tr>
+		</table>
+		<table width="100%" border=0>
+			<tr bgColor=#1c5db6 height=4>
+				<td></td>
+			</tr>
+		</table>
+		<br />
+	</div>
+	<!-- 布局中部 -->
+	<div class="login">
+		<div class="login-form">
+			<div class="login-up">
+				<h2 class="login-title">注册</h2>
+				<a class="login-tologin" href="login.html">已有账号，立即登陆</a>
+			</div>
+			<form id="loginform" class="form form-horizontal" action="index.html"
+				method="post">
+				<input type="hidden" name="refer" value="">
+				<div class="login-item">
+					<label class="login-label">用户名<span class="required">*</span></label>
+					<input type="text" id="username" autofocus="autofocus"
+						autocomplete="off" placeholder="学号/手机/邮箱" name="username"
+						class="login-con ">
+				</div>
+				<div class="login-item">
+					<label class="login-label">密码<span class="required">*</span></label>
+					<input type="password" id="password" autocomplete="off"
+						placeholder="登录密码" name="password" class="login-con ">
+				</div>
+				<div class="login-item">
+					<label class="login-label">确认密码<span class="required">*</span></label>
+					<input type="password" id="password" autocomplete="off"
+						placeholder="登录密码" name="password" class="login-con ">
+				</div>
+				<div class="login-item">
+					<label class="login-label">验证码<span class="required">*</span></label>
+					<input id="scode" name="scode" class="login-con login-code"
+						placeholder="验证码"> <img src="images/scode.png"
+						alt="点击修改验证码" title="点击刷新验证码" onclick="" id="img_scode"
+						class="code_box">
+				</div>
+				<div class="login-item">
+					<input name="remember" value="1" checked="checked" type="checkbox">
+					我已阅读并同意&nbsp;&nbsp; <a href="#">《用户协议》</a>
+				</div>
+				<div class="login-item">
+					<button type="submit" class="login-btn" onclick="">登录</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="lf">
+			<a href="/about/" rel="nofollow">首页</a> | <a href="/about/"
+				rel="nofollow">关于我们</a> | <a href="/about/lianxi.html"
+				rel="nofollow">联系我们</a>
+		</div>
+		上海厉善信息技术有限公司 Shanghai Li Shan Information Technology Co. LTD.
+	</div>
+
+</body>
+</html>
+

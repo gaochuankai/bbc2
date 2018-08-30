@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>bbc</display-name>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>RegisterServlet</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.bbc.system.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>TesCodeServlet</display-name>
+    <servlet-name>TesCodeServlet</servlet-name>
+    <servlet-class>com.bbc.system.servlet.TesCodeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TesCodeServlet</servlet-name>
+    <url-pattern>/tesCode</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LoginServlet</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.bbc.system.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListNodeInfoServlet</display-name>
+    <servlet-name>ListNodeInfoServlet</servlet-name>
+    <servlet-class>com.bbc.node.servlet.ListNodeInfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListNodeInfoServlet</servlet-name>
+    <url-pattern>/listNodeInfo</url-pattern>
+  </servlet-mapping>
+  
+  
+  <filter> 
+    <filter-name>sitemesh</filter-name> 
+     <filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class> 
+  </filter> 
+  <filter-mapping> 
+     <filter-name>sitemesh</filter-name> 
+     <url-pattern>/*</url-pattern> 
+  </filter-mapping>
+</web-app>

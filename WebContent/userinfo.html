@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>意坚教育-论坛</title>
+<link href="css/mycss.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+<style type="text/css">
+</style>
+  <script type="text/javascript">
+	function delText(){
+		return confirm("删除请点击确认");
+	}
+</script>
+</head>
+<body>
+
+
+
+	<!-- 布局顶部登录状态 -->
+	<div id="main">
+		<table cellSpacing=0 cellPadding=0 width="100%" border=0>
+			<!--头部图片-->
+			<tr height=80>
+				<td width=260><IMG height=80 src="images/logo.gif" width=260>
+				</td>
+				<td
+					style="FONT-SIZE: 12px; FONT-WEIGHT: bold; COLOR: #000;
+    	PADDING-TOP: 20px; PADDING-RIGHT: 20px"
+					align=right>欢迎您，张三&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="logout">退出</a></td>
+			</tr>
+		</table>
+		<table cellSpacing=0 cellPadding=0 width="100%" border=0>
+			<tr bgColor=#1c5db6 height=4>
+				<td></td>
+			</tr>
+		</table>
+		<br />
+	</div>
+	<!-- 布局中部 -->
+	<div id="middle">
+
+		<div class="user-left">
+
+
+			<div class="user-info">
+				<p>
+					<img class="user-pic" src="img/图片">
+				</p>
+				<p class='user-nikename'>张三</p>
+				<p>
+					<span>性别</span>女
+				</p>
+				
+				<p>
+					<span>最新登录</span>2017-05-30 16:16:48
+				</p>
+				<p>
+					<span>注册日期</span>2017-02-11
+				</p>
+				<p>
+					<span><a href="findById?id=${user.userid}">修改信息</a></span>
+				</p>
+			</div>
+		</div>
+
+		<div class="user-right text_list">
+		
+			<table>
+				
+					<tr>
+						<td><h5>TA的贴子</h5></td>
+						<td></td>
+						<td></td>
+				        <td><h4><a href="categoryName"><font color="green">发帖</font></a></h4></td>
+					</tr>
+					<tr>
+						<th>帖子名</th>
+						<th>栏目</th>
+						<th>发布时间</th>
+						<th>删除</th>
+					</tr>
+					<tr>
+						<td><a href="textDetails?id=${text.textid}" target="_blank">静态下</a></td>
+						<td><a href="#" target="_blank">体育</a></td>
+						<td>2018-05-05</td>
+						<td><a href="delText?id=${text.textid}" onclick="return delText()">删除</a></td>
+					</tr>
+					<tr>
+						<td><a href="textDetails?id=${text.textid}" target="_blank">静态下</a></td>
+						<td><a href="#" target="_blank">体育</a></td>
+						<td>2018-05-05</td>
+						<td><a href="delText?id=${text.textid}" onclick="return delText()">删除</a></td>
+					</tr>
+			
+
+				
+			</table>
+		</div>
+		
+		<div class="page">
+				<ul id="pagination-flickr">
+					<li class="pre-off"><a href="personal?page=${page.pageNow-1}">上一页</a></li>
+					
+					<li><a href="personal?page=${i}">[1]</a></li>
+					<li><a href="personal?page=${i}">[2]</a></li>
+					<li><a href="personal?page=${i}">[3]</a></li>
+					<li><a href="personal?page=${i}">[4]</a></li>
+					
+					<li class="next"><a href="personal?page=${page.pageNow+1}">下一页</a></li>
+					
+				</ul>
+			</div>
+
+	</div>
+
+	<div id="footer">
+		<div class="lf">
+			<a href="#" rel="nofollow">首页</a> | <a href="#" rel="nofollow">关于我们</a>
+			| <a href="#" rel="nofollow">联系我们</a>
+		</div>
+		上海厉善信息技术有限公司 Shanghai Li Shan Information Technology Co. Ltd.
+	</div>
+
+</body>
+</html>
+

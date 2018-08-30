@@ -1,0 +1,27 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator" prefix="decorator"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if lt IE 7 ]> <html lang="en" class="ie6 ielt8"> <![endif]-->
+<!--[if IE 7 ]> <html lang="en" class="ie7 ielt8"> <![endif]-->
+<!--[if IE 8 ]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml"> <!--<![endif]-->
+<head>
+<%@ include file="/frontcommon_toc/meta.jsp" %>
+<%@ include file="/frontcommon_toc/style_script.jsp"%>
+<title>SMS安全管理平台</title>
+<decorator:head/>
+</head>
+<body oncontextmenu=self.event.returnValue=false
+<decorator:getProperty property="body.id" writeEntireProperty="true"/> 
+<decorator:getProperty property="body.class" writeEntireProperty="true"/>>
+<%@include file="../frontcommon_toc/header.jsp" %>
+<!-- EVERYTING BELOW IS THE MAIN CONTENT -->
+<div id="main_content_wrap" class="container_12">
+	<decorator:body/>
+</div>
+<%@include file="../frontcommon_toc/footer.jsp" %>
+</body>
+</html>
+
