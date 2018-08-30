@@ -45,6 +45,7 @@ public class ShowNodeInfoServlet extends HttpServlet {
 		request.setAttribute("nodeInfoEntity", nodeInfoEntity);
 		request.setAttribute("nodeReplyList", list);
 		request.getRequestDispatcher("/reply.jsp").forward(request, response);
+	
 	}
 
 	@Override
